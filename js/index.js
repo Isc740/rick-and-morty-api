@@ -20,7 +20,8 @@ const getCharacterCard = (characterData) => `
           </div>
         </div>
       </div>
-    </div>`;
+    </div>
+`;
 
 document.addEventListener("DOMContentLoaded", async () => {
     const characterName = prompt("Ingrese personaje a buscar:");
