@@ -1,6 +1,6 @@
 const Utils = {
     getCharacterCard: (characterData) => `
-        <div class="item-card card mb-3 shadow-sm" style="max-width: 540px;">
+        <div class="item-card card mb-3 shadow-sm" style="width: 580px;">
             <div class="row g-0">
                 <div class="col-md-4">
                     <img
@@ -11,16 +11,11 @@ const Utils = {
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
-                        <h5 class="card-title">${characterData.name}</h5>
-                        <p class="card-text my-0">Status: ${characterData.status}</p>
-                        <p class="card-text my-0">Species: ${characterData.species} ${characterData.type}</p>
-                        <p class="card-text my-0">Gender: ${characterData.gender}</p>
-                        <p class="card-text my-0">Origin: ${characterData.origin.name}</p>
-                        <p class="card-text my-3">
-                            <small class="text-body-secondary">
-                                Created: ${new Date(characterData.created)}
-                            </small>
-                        </p>
+                        <h5 class="card-title fw-bold">${characterData.name}</h5>
+                        <p class="card-text my-0"><strong>Status: </strong><span class="">${characterData.status}</span></p>
+                        <p class="card-text my-0"><strong>Species: </strong> ${characterData.species} ${characterData.type}</p>
+                        <p class="card-text my-0"><strong>Gender: </strong> ${characterData.gender}</p>
+                        <p class="card-text my-0"><strong>Origin: </strong> ${characterData.origin.name}</p>
                     </div>
                 </div>
             </div>
