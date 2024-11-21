@@ -1,6 +1,6 @@
 const Utils = {
     getCharacterCard: (characterData) => `
-        <div class="card mb-3 shadow-sm" style="max-width: 540px;">
+        <div class="item-card card mb-3 shadow-sm" style="max-width: 540px;">
             <div class="row g-0">
                 <div class="col-md-4">
                     <img

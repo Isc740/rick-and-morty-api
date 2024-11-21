@@ -1,5 +1,10 @@
+.item-card {
+    transition: all 250ms ease;
+    cursor: pointer;
+}
+
 .item-card:hover {
-    box-shadow: 7px 8px 8px 4px #e9ecef;
+    box-shadow: 20px 22px 22px 16px #e9ecef;
     transform: scale(1.02);
 }
 
@@ -12,4 +17,8 @@
 
 .c-bg-primary {
     background-color: #0f1023;
+}
+
+.hero-img-container {
+    padding: 0;
 }
