@@ -9,3 +9,7 @@
     width: 100%;
     z-index: 1000;
 }
+
+.c-bg-primary {
+    background-color: #0f1023;
+}
