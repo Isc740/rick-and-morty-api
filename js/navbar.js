@@ -1,5 +1,5 @@
 const getNavbar = () => ` 
-    <nav class="navbar navbar-expand-md bg-white mb-5 shadow-sm navbar-light">
+    <nav class="navbar navbar-expand-md bg-white mb-5 shadow-sm">
         <div class="container-fluid">
             <a class="navbar-brand" href="/index.html">
                 Rick and Morty API
@@ -18,10 +18,10 @@ const getNavbar = () => `
             <div class="collapse navbar-collapse" id="navbar-toggler">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Characters</a>
+                        <a class="nav-link active" aria-current="page" href="/views/characters.html">Characters</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Episodes</a>
+                        <a class="nav-link active" href="/views/episodes.html">Episodes</a>
                     </li>
                 </ul>
                 <form class="d-flex search-navbar" role="search">

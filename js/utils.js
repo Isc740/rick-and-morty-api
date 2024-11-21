@@ -12,14 +12,13 @@ const Utils = {
                 <div class="col-md-8">
                     <div class="card-body">
                         <h5 class="card-title">${characterData.name}</h5>
-                        <p class="card-text">
-                            This is a wider card with supporting text below as a
-                            natural lead-in to additional content. This content
-                            is a little bit longer.
-                        </p>
-                        <p class="card-text">
+                        <p class="card-text my-0">Status: ${characterData.status}</p>
+                        <p class="card-text my-0">Species: ${characterData.species} ${characterData.type}</p>
+                        <p class="card-text my-0">Gender: ${characterData.gender}</p>
+                        <p class="card-text my-0">Origin: ${characterData.origin.name}</p>
+                        <p class="card-text my-3">
                             <small class="text-body-secondary">
-                                Last updated 3 mins ago
+                                Created: ${new Date(characterData.created)}
                             </small>
                         </p>
                     </div>
@@ -28,12 +27,24 @@ const Utils = {
         </div>
     `,
 
-    async getCharacterQuery(name) {
+    async getQuery(type = "character", name = "", page = 1) {
         const response = await fetch(
-            `https://rickandmortyapi.com/api/character/?name=${name}`,
+            `https://rickandmortyapi.com/api/${type}/?name=${name}&page=${page}`,
         );
         const data = await response.json();
         return data;
+    },
+
+    replaceContent(element, content, container) {
+        element.innerHTML = content
+            .map((character) => container(character))
+            .join("");
+    },
+
+    addContent(element, content, container) {
+        element.innerHTML += content
+            .map((character) => container(character))
+            .join("");
     },
 };
 

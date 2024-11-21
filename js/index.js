@@ -1,10 +1,11 @@
 import Utils from "./utils.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
-    //const characterName = prompt("Ingrese personaje a buscar:");
-    const queryData = await Utils.getCharacterQuery("rick");
+    const queryData = await Utils.getQuery("character");
 
-    document.querySelector(".query-container").innerHTML += queryData.results
-        .map((element) => Utils.getCharacterCard(element))
-        .join("");
+    Utils.replaceContent(
+        document.querySelector(".query-container"),
+        queryData.results,
+        Utils.getCharacterCard,
+    );
 });
